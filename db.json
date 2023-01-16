@@ -2,7 +2,11 @@
     "posts": [
       {
         "id": 1,
-        "title": "hello"
+        "first_name": "hello",
+        "last_name": "bohol",
+        "email": "a@a.com",
+        "password": "a",
+        "confirmpassword": "a"
       }
     ],
     "profile": {

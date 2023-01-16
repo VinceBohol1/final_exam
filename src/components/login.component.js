@@ -12,10 +12,12 @@ export default class Login extends Component {
         };
         console.log(data);
 
-        axios.post('https://jsonplaceholder.typicode.com/vegeto', { data }).then(
+        axios.post('https://my-json-server.typicode.com/VinceBohol1/final_exam/posts', {data}).then(
             response => {
-                console.log(response)
-                console.log("Data posted")
+                localStorage.setItem('token', response.data.token);
+                console.log(response);
+                console.log(response.data);
+                console.log("Data posted");
             }
         ).catch(err => {
                 console.log(err)

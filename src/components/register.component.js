@@ -4,19 +4,20 @@ export default class Register extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        
         const data ={
             first_name: this.firstName,
             last_name: this.lastName,
             email: this.email,
             password: this.password,
-            password_confirm: this.confirmpassword,
+            password_confirm: this.confirmpassword
         };
 
 
-        axios.post('http://localhost:8000/register', data).then(
-            res => {
-                console.log(res.data)
-                console.log(res)
+        axios.post('https://my-json-server.typicode.com/VinceBohol1/final_exam/posts', data).then(
+            (response) => {
+                console.log(response.data)
+                console.log(response)
             
             }
         ).catch(
